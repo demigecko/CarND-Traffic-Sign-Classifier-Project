@@ -19,14 +19,14 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./examples/visualization.jpg "Visualization"
-[image2]: ./examples/grayscale.jpg "Grayscaling"
-[image3]: ./examples/random_noise.jpg "Random Noise"
-[image4]: ./examples/placeholder.png "Traffic Sign 1"
-[image5]: ./examples/placeholder.png "Traffic Sign 2"
-[image6]: ./examples/placeholder.png "Traffic Sign 3"
-[image7]: ./examples/placeholder.png "Traffic Sign 4"
-[image8]: ./examples/placeholder.png "Traffic Sign 5"
+[image1]: ./visualizations/visualization.jpg "Visualization"
+[image2]: ./visualizations/grayscale.jpg "Grayscaling"
+[image3]: ./visualizations/random_noise.jpg "Random Noise"
+[image4]: ./visualizations/placeholder.png "Traffic Sign 1"
+[image5]: ./visualizations/placeholder.png "Traffic Sign 2"
+[image6]: ./visualizations/placeholder.png "Traffic Sign 3"
+[image7]: ./visualizations/placeholder.png "Traffic Sign 4"
+[image8]: ./visualizations/placeholder.png "Traffic Sign 5"
 
 ## Rubric Points
 ### Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
@@ -45,7 +45,7 @@ You're reading it! and here is a link to my [project code](https://github.com/ud
 I used the pandas library to calculate summary statistics of the traffic
 signs data set:
 
-* The size of training set is ?
+* The size of training set is ? 
 * The size of the validation set is ?
 * The size of test set is ?
 * The shape of a traffic sign image is ?
