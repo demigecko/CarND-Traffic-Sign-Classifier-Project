@@ -21,7 +21,7 @@ The goals / steps of this project are the following:
 [image2]: ./visualizations/unprocessed_distributions.png "All traffic signs"
 [image3]: ./visualizations/all_traffic_signs.png "all_traffic_signs"
 [image4]: ./visualizations/training_idea1_1.png "results_Normalized Image"
-[image5]: ./visualizations/training_idea1_2.png "results_Normalized Image"
+[image4_1]: ./visualizations/training_idea1_2.png "results_Normalized Image"
 [image6]: ./visualizations/placeholder.png "Traffic Sign 3"
 [image7]: ./visualizations/placeholder.png "Traffic Sign 4"
 [image8]: ./visualizations/placeholder.png "Traffic Sign 5"
@@ -40,7 +40,7 @@ You're reading it! and here is a link to my [project code](https://github.com/de
 
 #### 1. Provide a basic summary of the data set. In the code, the analysis should be done using python, numpy and/or pandas methods rather than hardcoding results manually.
 
-I used the pandas library to calculate summary statistics of the traffic
+I used the library to calculate summary statistics of the traffic
 signs data set:
 
 * The size of training set is ?  
@@ -74,7 +74,10 @@ I have several idea of improving the Validation Accuracy.
 #### 1. Normalized Image
 As a first step, I decided to do image normalization, because it seems to be a right way to avoid and here is the results
 
-![alt text][image4] [Image5]
+![alt text][image4] 
+![alt text][Image4_1]
+
+I found I noticed it seems to have the overfitting because the **validation accuracy** is constantly lower than the **training accuracy**, so I made some attempts to reduce the LeNet full-connected layers. I thought to reduce the parameters can help the overfitting issue. 
 
 #### 2. Use R G B  + gray (4 Channels) 
 
