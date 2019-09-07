@@ -17,7 +17,7 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./visualizations/visualization.jpg "Visualization"
+[image1]: ./visualizations/exploratory.jpg "exploratory"
 [image2]: ./visualizations/grayscale.jpg "Grayscaling"
 [image3]: ./visualizations/random_noise.jpg "Random Noise"
 [image4]: ./visualizations/placeholder.png "Traffic Sign 1"
@@ -43,17 +43,19 @@ You're reading it! and here is a link to my [project code](https://github.com/de
 I used the pandas library to calculate summary statistics of the traffic
 signs data set:
 
-* The size of training set is ? 
+* The size of training set is ?  
 * The size of the validation set is ?
 * The size of test set is ?
 * The shape of a traffic sign image is ?
 * The number of unique classes/labels in the data set is ?
 
+![alt text][image1]
+
 #### 2. Include an exploratory visualization of the dataset.
 
 Here is an exploratory visualization of the data set. It is a bar chart showing how the data ...
 
-![alt text][image1]
+
 
 ### Design and Test a Model Architecture
 
