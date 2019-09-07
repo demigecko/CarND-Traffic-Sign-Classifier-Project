@@ -18,8 +18,8 @@ The goals / steps of this project are the following:
 [//]: # (Image References)
 
 [image1]: ./visualizations/exploratory.png "exploratory"
-[image2]: ./visualizations/grayscale.jpg "Grayscaling"
-[image3]: ./visualizations/random_noise.jpg "Random Noise"
+[image2]: ./visualizations/unprocessed_distributions.png "All traffic signs"
+[image3]: ./visualizations/random_noise.jpg "all_traffic_signs"
 [image4]: ./visualizations/placeholder.png "Traffic Sign 1"
 [image5]: ./visualizations/placeholder.png "Traffic Sign 2"
 [image6]: ./visualizations/placeholder.png "Traffic Sign 3"
@@ -53,9 +53,13 @@ signs data set:
 
 #### 2. Include an exploratory visualization of the dataset.
 
-Here is an exploratory visualization of the data set. It is a bar chart showing how the data ...
+Here is an exploratory visualization of the data set. It is a bar chart showing how the data distributed. 
 
+![alt text][image2]
 
+I aslo prepared a dictionary to see all the signs v.s. images in grayscale. 
+
+![alt text][image3]
 
 ### Design and Test a Model Architecture
 
