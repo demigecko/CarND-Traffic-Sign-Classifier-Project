@@ -54,9 +54,12 @@ signs data set:
 #### 2. Include an exploratory visualization of the dataset.
 
 Here is an exploratory visualization of the data set. It is a bar chart showing how the data distributed. 
-I know I can do data augmentation to encrease, but this wll not be my priority at this project. 
+I know I can do data augmentation to increase the dataset, but this wll not be my priority in this project. My goal is to use the provided dataset to meet the Accuracy spec.
 
 ![alt text][image2]
+
+max count is 2010
+min count is  180
 
 I aslo prepared a dictionary to see all the signs v.s. images in grayscale. 
 
