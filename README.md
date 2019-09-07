@@ -20,8 +20,8 @@ The goals / steps of this project are the following:
 [image1]: ./visualizations/exploratory.png "exploratory"
 [image2]: ./visualizations/unprocessed_distributions.png "All traffic signs"
 [image3]: ./visualizations/all_traffic_signs.png "all_traffic_signs"
-[image4]: ./visualizations/placeholder.png "Traffic Sign 1"
-[image5]: ./visualizations/placeholder.png "Traffic Sign 2"
+[image4]: ./visualizations/training_idea1_1.png "results_Normalized Image"
+[image5]: ./visualizations/training_idea1_2.png "results_Normalized Image"
 [image6]: ./visualizations/placeholder.png "Traffic Sign 3"
 [image7]: ./visualizations/placeholder.png "Traffic Sign 4"
 [image8]: ./visualizations/placeholder.png "Traffic Sign 5"
@@ -54,6 +54,7 @@ signs data set:
 #### 2. Include an exploratory visualization of the dataset.
 
 Here is an exploratory visualization of the data set. It is a bar chart showing how the data distributed. 
+I know I can do data augmentation to encrease, but this wll not be my priority at this project. 
 
 ![alt text][image2]
 
@@ -65,7 +66,16 @@ I aslo prepared a dictionary to see all the signs v.s. images in grayscale.
 
 #### 1. Describe how you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, and provide example images of the additional data. Then describe the characteristics of the augmented training set like number of images in the set, number of images for each class, etc.)
 
-As a first step, I decided to convert the images to grayscale because ...
+I have several idea of improving the Validation Accuracy. 
+
+### 1. Normalized Image
+As a first step, I decided to do image normalization, because it seems to be a right way to avoid and here is the results
+
+![alt text][image4][Image5]
+
+
+
+convert the images to grayscale because ...
 
 Here is an example of a traffic sign image before and after grayscaling.
 
