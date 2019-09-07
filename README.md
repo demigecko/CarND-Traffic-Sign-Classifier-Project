@@ -19,7 +19,7 @@ The goals / steps of this project are the following:
 
 [image1]: ./visualizations/exploratory.png "exploratory"
 [image2]: ./visualizations/unprocessed_distributions.png "All traffic signs"
-[image3]: ./visualizations/random_noise.jpg "all_traffic_signs"
+[image3]: ./visualizations/all_traffic_signs.png "all_traffic_signs"
 [image4]: ./visualizations/placeholder.png "Traffic Sign 1"
 [image5]: ./visualizations/placeholder.png "Traffic Sign 2"
 [image6]: ./visualizations/placeholder.png "Traffic Sign 3"
