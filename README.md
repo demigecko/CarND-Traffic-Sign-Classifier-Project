@@ -71,18 +71,25 @@ I aslo prepared a dictionary to see all the signs v.s. images in grayscale.
 
 I have several idea of improving the Validation Accuracy. 
 
-### 1. Normalized Image
+#### 1. Normalized Image
 As a first step, I decided to do image normalization, because it seems to be a right way to avoid and here is the results
 
-![alt text][image4][Image5]
+![alt text][image4] [Image5]
 
-
+#### 2. Use R G B  + gray (4 Channels) 
 
 convert the images to grayscale because ...
 
 Here is an example of a traffic sign image before and after grayscaling.
 
-![alt text][image2]
+![alt text][image?]
+
+
+#### 3. To use Gray image and tune the LeNet models
+
+#### 4.  Introduce the Dropout in LeNet
+
+#### 5. Increase the database: Data Augmention
 
 As a last step, I normalized the image data because ...
 
@@ -92,7 +99,7 @@ To add more data to the the data set, I used the following techniques because ..
 
 Here is an example of an original image and an augmented image:
 
-![alt text][image3]
+![alt text][image?]
 
 The difference between the original data set and the augmented data set is the following ... 
 
