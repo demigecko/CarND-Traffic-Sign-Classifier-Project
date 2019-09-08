@@ -70,47 +70,11 @@ I also prepared a dictionary to see all the signs v.s. images in grayscale.
 
 #### 1. Describe how you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, and provide example images of the additional data. Then describe the characteristics of the augmented training set like number of images in the set, number of images for each class, etc.)
 
-I have several ideas for improving validation accuracy. In the following,  I will show you one by one and provide a summary. 
 
-#### 1. Normalized Image + Dropout
-As a first step, I decided to do image normalization, because it seems to be a right way to do. Here are the results. 
+From the last session, the number of some traffic sign images is not sufficient (i.e. max: 2010 and min: 180). Moreover, after many times of playing with the LeNet 5-layer Architecture, I noticed 3 things: (1) It's better to use grayscale images, (2) need to enlarge the dataset by augmenting the existing images. (3) it is nice to introduce the dropout in the layers. 
 
-![alt text][image4] 
 
-|  image      | Normalized     | Dropout     | Validation Accuracy     |
-|:-------:    |:----------:    |:-------:    |:-------------------:    |
-| 32x32x3     |      x         |    x        |          -              |
-| 32x32x3     |      v         |    x        |          -              |
-| 32x32x3     |      x         |    v        |          -              |
-| 32x32x3     |      v         |    v        |          -              |
-
-I found I noticed it seems to have the overfitting because the **validation accuracy** is constantly lower than the **training accuracy**, so I made some attempts to reduce the LeNet full-connected layers. I thought to reduce the parameters can help the overfitting issue. 
-
-#### 2. Use R G B  + gray (4 Channels) + Dropout
-
-convert the images to grayscale because ...
-
-Here is an example of a traffic sign image before and after grayscaling.
-
-![alt text][image?]
-
-|  image      | Normalized     | Dropout     | Validation Accuracy     |
-|:-------:    |:----------:    |:-------:    |:-------------------:    |
-| 32x32x4     |      x         |    x        |          -              |
-| 32x32x4     |      v         |    x        |          -              |
-| 32x32x4     |      x         |    v        |          -              |
-| 32x32x4     |      v         |    v        |          -              |
-
-#### 3. To use Gray image + Dropout
-
-|  image      | Normalized     | Dropout     | Validation Accuracy     |
-|:-------:    |:----------:    |:-------:    |:-------------------:    |
-| 32x32x1     |      x         |    x        |          -              |
-| 32x32x1     |      v         |    x        |          -              |
-| 32x32x1     |      x         |    v        |          -              |
-| 32x32x1     |      v         |    v        |          -              |
-
-#### 4. Increase the database: Data Augmention
+#### Increase the database: Data Augmention
 
 As a last step, I normalized the image data because ...
 
@@ -123,6 +87,60 @@ Here is an example of an original image and an augmented image:
 ![alt text][image?]
 
 The difference between the original data set and the augmented data set is the following ... 
+
+
+
+
+#### 1. RGB image (32, 32, 3)
+As a first step, I decided to do image normalization, because it seems to be a right way to do. Here are the results. 
+
+![alt text][image4] 
+
+|  image      | Dataset Boost     | Normalized     | Dropout     | Validation Accuracy     |
+|:-------:    |:-------------:    |:----------:    |:-------:    |:-------------------:    |
+| 32x32x3     |       x           |      x         |    x        |          -              |
+| 32x32x3     |       v           |      x         |    x        |          -              |
+| 32x32x3     |       x           |      v         |    x        |          -              |
+| 32x32x3     |       x           |      x         |    v        |          -              |
+| 32x32x3     |       v           |      v         |    x        |          -              |
+| 32x32x3     |       x           |      v         |    v        |          -              |
+| 32x32x3     |       v           |      x         |    v        |          -              |
+| 32x32x3     |       v           |      v         |    v        |          -              |
+
+I found I noticed it seems to have the overfitting because the **validation accuracy** is constantly lower than the **training accuracy**, so I made some attempts to reduce the LeNet full-connected layers. I thought to reduce the parameters can help the overfitting issue. 
+
+#### 2. Use R G B + gray (32, 32, 4) 
+
+convert the images to grayscale because ...
+
+Here is an example of a traffic sign image before and after grayscaling.
+
+![alt text][image?]
+
+|  image      | Dataset Boost     | Normalized     | Dropout     | Validation Accuracy     |
+|:-------:    |:-------------:    |:----------:    |:-------:    |:-------------------:    |
+| 32x32x3     |       x           |      x         |    x        |          -              |
+| 32x32x3     |       v           |      x         |    x        |          -              |
+| 32x32x3     |       x           |      v         |    x        |          -              |
+| 32x32x3     |       x           |      x         |    v        |          -              |
+| 32x32x3     |       v           |      v         |    x        |          -              |
+| 32x32x3     |       x           |      v         |    v        |          -              |
+| 32x32x3     |       v           |      x         |    v        |          -              |
+| 32x32x3     |       v           |      v         |    v        |          -              |
+
+#### 3.  Use Gray image only (32, 32, 1)
+
+|  image      | Dataset Boost     | Normalized     | Dropout     | Validation Accuracy     |
+|:-------:    |:-------------:    |:----------:    |:-------:    |:-------------------:    |
+| 32x32x3     |       x           |      x         |    x        |          -              |
+| 32x32x3     |       v           |      x         |    x        |          -              |
+| 32x32x3     |       x           |      v         |    x        |          -              |
+| 32x32x3     |       x           |      x         |    v        |          -              |
+| 32x32x3     |       v           |      v         |    x        |          -              |
+| 32x32x3     |       x           |      v         |    v        |          -              |
+| 32x32x3     |       v           |      x         |    v        |          -              |
+| 32x32x3     |       v           |      v         |    v        |          -              |
+
 
 
 #### 2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
