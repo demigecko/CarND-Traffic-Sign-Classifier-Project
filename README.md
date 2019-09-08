@@ -23,8 +23,12 @@ The goals / steps of this project are the following:
 [image4]: ./visualizations/augmented_images.png "sample of augmented_images"
 [image5]: ./visualizations/processed_distributions.png "processed_distributions of all traffic signs"
 [image6]: ./visualizations/comfirmed_new_dataset.png "make sure all in the right places"
-[image7]: ./visualizations/training_idea1_1.png "results_Normalized Image"
-[image7_1]: ./visualizations/training_idea1_2.png "results_Normalized Image"
+[image7_1]: ./visualizations/training_idea1_1.png "results_Normalized Image"
+[image7_2]: ./visualizations/training_idea1_2.png "results_Normalized Image"
+[image7_3]: ./visualizations/training_idea1_2.png "results_Normalized Image"
+[image7_1]: ./visualizations/training_idea1_1.png "results_Normalized Image"
+[image7_2]: ./visualizations/training_idea1_2.png "results_Normalized Image"
+[image7_3]: ./visualizations/training_idea1_2.png "results_Normalized Image"
 [image8]: ./visualizations/placeholder.png "Traffic Sign 3"
 [image9]: ./visualizations/placeholder.png "Traffic Sign 4"
 [image10]: ./visualizations/placeholder.png "Traffic Sign 5"
@@ -98,23 +102,25 @@ To examine if my code performs properly, I picked one category of the traffic si
 
 To simplfy my DOE (design of experiments). Here is my table:  
 
-| DOE     |  image      | Dataset Boost     | Normalized     | Dropout     | Validation Accuracy     |
-|:---:    |:-------:    |:-------------:    |:----------:    |:-------:    |:-------------------:    |
-|  1      | 32x32x3     |       v           |      x         |    x        |          -              |
-|  2      | 32x32x3     |       v           |      v         |    x        |          -              |
-|  3      | 32x32x3     |       v           |      v         |    v        |          -              |
+
+| DOE     |  image      | Dataset Boost     | Normalized     | Dropout     | Training Accuracy     | Validation Accuracy     | Overfitting?     |
+|:---:    |:-------:    |:-------------:    |:----------:    |:-------:    |-------------------    |:-------------------:    |:------------:    |
+|  1      |  32x32x3    |       v           |      x         |    x        |        0.991        |  0.916            |          Yes                |
+|  2      | 32x32x3     |       v           |      v         |    x        |        0.981        | 0.746            |          Yes                 |
+|  3      | 32x32x3     |       v           |      v         |    v        |        0.926          | 0.772          |          Yes                 |
+
 
 #### 2. Use R G B + gray (32, 32, 4) 
 
 To simplfy my DOE (design of experiments). Here is my table:  
 
-| DOE     |  image      | Dataset Boost     | Normalized     | Dropout     | Validation Accuracy     |
-|:---:    |:-------:    |:-------------:    |:----------:    |:-------:    |:-------------------:    |
-|  1      | 32x32x4     |       v           |      x         |    x        |          -              |
-|  2      | 32x32x4     |       v           |      v         |    x        |          -              |
-|  3      | 32x32x4     |       v           |      v         |    v        |          -              |
-|  4      | 32x32x4     |       v           |      x         |    v        |          -              |
-|  5      | 32x32x4     |       x           |      x         |    v        |          -              |
+| DOE     |  image      | Dataset Boost     | Normalized     | Dropout     | Training Accuracy     | Validation Accuracy     | Overfitting?     |
+|:---:    |:-------:    |:-------------:    |:----------:    |:-------:    |-------------------    |:-------------------:    |:------------:    |
+|  1      | 32x32x4     |       v           |      x         |    x        |                       |                         |      No          |
+|  2      | 32x32x4     |       v           |      v         |    x        |                       |          -              |                  |
+|  3      | 32x32x4     |       v           |      v         |    v        |                       |          -              |                  |
+|  4      | 32x32x4     |       v           |      x         |    v        |                       |          -              |                  |
+|  5      | 32x32x4     |       x           |      x         |    v        |                       |          -              |                  |
 
 for some reason, normalized RGB isn't the best option. 
 
