@@ -58,7 +58,7 @@ signs data set:
 
 Here is an exploratory visualization of the data set. It is a bar chart showing how the data distributed. 
 
-One way to improve the Accuracy and not having overfitting, we can use data augmentation to increase the dataset, but this will not be my priority in this project. My goal is to use the provided dataset to meet the Udacity proejct accuracy spec.
+One way to improve the accuracy and not having overfitting, and we can use data augmentation to increase the dataset first. 
 
 ![alt text][image2]
 
@@ -79,11 +79,12 @@ From the last session, the number of some traffic sign images is not sufficient 
 
 #### Increase the database: Data Augmention
 
-I used three types of Augmentation: Rotation, Shear, and Translation to achieve the target images numbers. 
+I decided to generate additional data because the ratio of max numbers of traffic sign to the min of that is large (max/min = 2010 /180 > 10x )
+Therefore, I used three types of Augmentation: Rotation, Shear, and Translation to achieve the target image number is 2010. 
 
 ![alt text][image4] 
 
-and I increased the dataset, now all traffic sign has 2010 images for training.  
+Here is another look of exploratory visualization of the boost dataset. It is a bar chart showing how the data evenly distributed. 
 
 ![alt text][image5] 
 
@@ -92,9 +93,11 @@ To see if my code performs properly, I picked one traffic sign category and rand
 ![alt text][image6]
 
 
-As a last step, I normalized the image data because ...
 
-I decided to generate additional data because ... 
+#### 1. RGB image (32, 32, 3)
+ After data augmentation in the first step, I decided to do image normalization, because it seems to be the right way to do. . 
+
+
 
 To add more data to the the data set, I used the following techniques because ... 
 
@@ -104,11 +107,6 @@ Here is an example of an original image and an augmented image:
 
 The difference between the original data set and the augmented data set is the following ... 
 
-
-
-
-#### 1. RGB image (32, 32, 3)
-As a first step, I decided to do image normalization, because it seems to be a right way to do. Here are the results. 
 
 ![alt text][image4] 
 
