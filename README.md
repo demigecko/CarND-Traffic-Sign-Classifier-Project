@@ -79,10 +79,10 @@ As a first step, I decided to do image normalization, because it seems to be a r
 
 | Image               |     Normalized            |   Dropout           |  Validation Accuracy  |
 |:-----------------:|:------------------------:|: -----------------:|:------------------------:| 
-|  32x32x3          |           x                       |   x                      |                |
-|  32x32x3          |           v                       |   x                      |                |
-|  32x32x3          |           x                       |   v                      |                |
-|  32x32x3          |           v                       |   v                      |                
+|  32x32x3          |           x                       |   x                      |                c    |
+|  32x32x3          |           v                       |   x                      |                 c   |
+|  32x32x3          |           x                       |   v                      |                c    |
+|  32x32x3          |           v                       |   v                      |                  c  |
 
 
 I found I noticed it seems to have the overfitting because the **validation accuracy** is constantly lower than the **training accuracy**, so I made some attempts to reduce the LeNet full-connected layers. I thought to reduce the parameters can help the overfitting issue. 
@@ -97,19 +97,19 @@ Here is an example of a traffic sign image before and after grayscaling.
 
 | Image               |     Normalized            |   Dropout           |  Validation Accuracy  |
 |:-----------------:|:------------------------:|: -----------------:|:-----------------------:| 
-|  32x32x4          |           x                       |   x                      |                |
-|  32x32x4          |           v                       |   x                      |                |
-|  32x32x4          |           x                       |   v                      |                |
-|  32x32x4          |           v                       |   v                      |                
+|  32x32x4          |           x                       |   x                      |                 c       |
+|  32x32x4          |           v                       |   x                      |                  c      |
+|  32x32x4          |           x                       |   v                      |                  c      |
+|  32x32x4          |           v                       |   v                      |                   c     |
 
 #### 3. To use Gray image + Dropout
 
 | Image               |     Normalized            |   Dropout           |  Validation Accuracy  |
 |:-----------------:|:------------------------:|: -----------------:|:------------------------:| 
-|  32x32x1          |           x                       |   x                      |               |
-|  32x32x1          |           v                       |   x                      |               |
-|  32x32x1          |           x                       |   v                      |               |
-|  32x32x1          |           v                       |   v                      |               
+|  32x32x1          |           x                       |   x                      |                   c         |
+|  32x32x1          |           v                       |   x                      |                  c          |
+|  32x32x1          |           x                       |   v                      |                    c        |
+|  32x32x1          |           v                       |   v                      |                    c        |
 
 #### 4. Increase the database: Data Augmention
 
