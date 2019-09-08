@@ -74,13 +74,12 @@ I also prepared a dictionary to see all the signs v.s. images in grayscale.
 #### 1. Describe how you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, and provide example images of the additional data. Then describe the characteristics of the augmented training set like number of images in the set, number of images for each class, etc.)
 
 
-From the last session, the number of some traffic sign images is not sufficient (i.e. max: 2010 and min: 180). Moreover, after many times of playing with the LeNet 5-layer Architecture, I noticed 3 things: (1) It's better to use grayscale images, (2) need to enlarge the dataset by augmenting the existing images. (3) it is nice to introduce the dropout in the layers. 
-
+From the last session, the number of some traffic sign images is not sufficient (i.e. max: 2010 and min: 180). Moreover, after many times of playing with the LeNet 5-layer Architecture, I noticed the following: the result can easily fall into the overfitting situation that the **validation accuracy** is constantly lower than the **training accuracy**. therefore I took three approaches: (1) to use grayscale images instead of color ones because the RGB information may not have a similar outcome,  (2)  to enlarge the dataset by augmenting the existing images. Having a large dataset is always the best option to overcome the overfitting, and (3) to introduce the dropout in the layers. All this work is to reduce the overfitting issue and obtain high validation/testing accuracy.  
 
 #### Increase the database: Data Augmention
 
 I decided to generate additional data because the ratio of max numbers of traffic sign to the min of that is large (max/min = 2010 /180 > 10x )
-Therefore, I used three types of Augmentation: Rotation, Shear, and Translation to achieve the target image number is 2010. 
+Therefore, I used three types of Augmentation: Rotation, Shear, and Translation to achieve the target image number is 2010 because these three types of image distortions are the **common** and **intuitive** for CNN-based models.
 
 ![alt text][image4] 
 
@@ -88,27 +87,16 @@ Here is another look of exploratory visualization of the boost dataset. It is a 
 
 ![alt text][image5] 
 
-To see if my code performs properly, I picked one traffic sign category and randomly select 15 images. 
+To examine if my code performs properly, I picked one category of the traffic sign and randomly select 15 images.
 
 ![alt text][image6]
 
 
-
 #### 1. RGB image (32, 32, 3)
- After data augmentation in the first step, I decided to do image normalization, because it seems to be the right way to do. . 
 
+ After data augmentation in the first step, I decided to do image normalization, because it helps to reduce the bias. Moreover, I tried the dropout (to reduce the variance), it will help to suppress those weak correlation parameters.  
 
-
-To add more data to the the data set, I used the following techniques because ... 
-
-Here is an example of an original image and an augmented image:
-
-![alt text][image?]
-
-The difference between the original data set and the augmented data set is the following ... 
-
-
-![alt text][image4] 
+To simplfy my DOE (design of experiments). Here is my table:  
 
 |  image      | Dataset Boost     | Normalized     | Dropout     | Validation Accuracy     |
 |:-------:    |:-------------:    |:----------:    |:-------:    |:-------------------:    |
@@ -121,15 +109,10 @@ The difference between the original data set and the augmented data set is the f
 | 32x32x3     |       v           |      x         |    v        |          -              |
 | 32x32x3     |       v           |      v         |    v        |          -              |
 
-I found I noticed it seems to have the overfitting because the **validation accuracy** is constantly lower than the **training accuracy**, so I made some attempts to reduce the LeNet full-connected layers. I thought to reduce the parameters can help the overfitting issue. 
 
 #### 2. Use R G B + gray (32, 32, 4) 
 
-convert the images to grayscale because ...
-
-Here is an example of a traffic sign image before and after grayscaling.
-
-![alt text][image?]
+To simplfy my DOE (design of experiments). Here is my table:  
 
 |  image      | Dataset Boost     | Normalized     | Dropout     | Validation Accuracy     |
 |:-------:    |:-------------:    |:----------:    |:-------:    |:-------------------:    |
@@ -144,6 +127,10 @@ Here is an example of a traffic sign image before and after grayscaling.
 
 #### 3.  Use Gray image only (32, 32, 1)
 
+Convert the images to grayscale because ...
+
+To simplfy my DOE (design of experiments). Here is my table:  
+
 |  image      | Dataset Boost     | Normalized     | Dropout     | Validation Accuracy     |
 |:-------:    |:-------------:    |:----------:    |:-------:    |:-------------------:    |
 | 32x32x3     |       x           |      x         |    x        |          -              |
@@ -154,7 +141,6 @@ Here is an example of a traffic sign image before and after grayscaling.
 | 32x32x3     |       x           |      v         |    v        |          -              |
 | 32x32x3     |       v           |      x         |    v        |          -              |
 | 32x32x3     |       v           |      v         |    v        |          -              |
-
 
 
 #### 2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
