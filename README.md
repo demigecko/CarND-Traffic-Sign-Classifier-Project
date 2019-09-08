@@ -77,7 +77,7 @@ As a first step, I decided to do image normalization, because it seems to be a r
 
 ![alt text][image4] 
 
-Image                 |     Normalized            |   Dropout           |  Validation Accuracy
+| Image               |     Normalized            |   Dropout           |  Validation Accuracy
 |:-----------------:|:------------------------:|: -----------------:|:------------------------
 |  32x32x3          |           x                       |   x                      |  
 |  32x32x3          |           v                       |   x                      |
@@ -95,7 +95,7 @@ Here is an example of a traffic sign image before and after grayscaling.
 
 ![alt text][image?]
 
-Image                 |     Normalized            |   Dropout           |  Validation Accuracy
+| Image               |     Normalized            |   Dropout           |  Validation Accuracy
 |:-----------------:|:------------------------:|: -----------------:|:------------------------
 |  32x32x4          |           x                       |   x                      |  
 |  32x32x4          |           v                       |   x                      |
@@ -104,7 +104,7 @@ Image                 |     Normalized            |   Dropout           |  Valid
 
 #### 3. To use Gray image + Dropout
 
-Image                 |     Normalized            |   Dropout           |  Validation Accuracy
+| Image               |     Normalized            |   Dropout           |  Validation Accuracy
 |:-----------------:|:------------------------:|: -----------------:|:------------------------
 |  32x32x1          |           x                       |   x                      |  
 |  32x32x1          |           v                       |   x                      |
