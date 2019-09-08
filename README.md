@@ -18,13 +18,17 @@ The goals / steps of this project are the following:
 [//]: # (Image References)
 
 [image1]: ./visualizations/exploratory.png "exploratory"
-[image2]: ./visualizations/unprocessed_distributions.png "All traffic signs"
+[image2]: ./visualizations/unprocessed_distributions.png "unprocessed_distribution of all traffic signs"
 [image3]: ./visualizations/all_traffic_signs.png "all_traffic_signs"
-[image4]: ./visualizations/training_idea1_1.png "results_Normalized Image"
-[image4_1]: ./visualizations/training_idea1_2.png "results_Normalized Image"
-[image6]: ./visualizations/placeholder.png "Traffic Sign 3"
-[image7]: ./visualizations/placeholder.png "Traffic Sign 4"
-[image8]: ./visualizations/placeholder.png "Traffic Sign 5"
+[image4]: ./visualizations/augmented_images.png "sample of augmented_images"
+[image5]: ./visualizations/processed_distributions.png "processed_distributions of all traffic signs"
+[image6]: ./visualizations/comfirmed_new_dataset "make sure all in the right places"
+
+[image7]: ./visualizations/training_idea1_1.png "results_Normalized Image"
+[image7_1]: ./visualizations/training_idea1_2.png "results_Normalized Image"
+[image8]: ./visualizations/placeholder.png "Traffic Sign 3"
+[image9]: ./visualizations/placeholder.png "Traffic Sign 4"
+[image10]: ./visualizations/placeholder.png "Traffic Sign 5"
 
 ## Rubric Points
 ### Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
@@ -75,6 +79,11 @@ From the last session, the number of some traffic sign images is not sufficient 
 
 
 #### Increase the database: Data Augmention
+
+I used three types of Augmentation: Rotation, Shear, and Translation to achieve the target images numbers. 
+
+![alt text][image4] 
+
 
 As a last step, I normalized the image data because ...
 
