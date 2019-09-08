@@ -72,15 +72,22 @@ I also prepared a dictionary to see all the signs v.s. images in grayscale.
 
 I have several ideas for improving validation accuracy. In the following,  I will show you one by one and provide a summary. 
 
-#### 1. Normalized Image
+#### 1. Normalized Image + Dropout
 As a first step, I decided to do image normalization, because it seems to be a right way to do. Here are the results. 
 
 ![alt text][image4] 
 
+Image                 |     Normalized            |   Dropout           |  Validation Accuracy
+|:-----------------:|:------------------------:|: -----------------:|:------------------------
+|  32x32x3          |           x                       |   x                      |  
+|  32x32x3          |           v                       |   x                      |
+|  32x32x3          |           x                       |   v                      | 
+|  32x32x3          |           v                       |   v                      | 
+
 
 I found I noticed it seems to have the overfitting because the **validation accuracy** is constantly lower than the **training accuracy**, so I made some attempts to reduce the LeNet full-connected layers. I thought to reduce the parameters can help the overfitting issue. 
 
-#### 2. Use R G B  + gray (4 Channels) 
+#### 2. Use R G B  + gray (4 Channels) + Dropout
 
 convert the images to grayscale because ...
 
@@ -88,12 +95,23 @@ Here is an example of a traffic sign image before and after grayscaling.
 
 ![alt text][image?]
 
+Image                 |     Normalized            |   Dropout           |  Validation Accuracy
+|:-----------------:|:------------------------:|: -----------------:|:------------------------
+|  32x32x4          |           x                       |   x                      |  
+|  32x32x4          |           v                       |   x                      |
+|  32x32x4          |           x                       |   v                      | 
+|  32x32x4          |           v                       |   v                      | 
 
-#### 3. To use Gray image and tune the LeNet models
+#### 3. To use Gray image + Dropout
 
-#### 4.  Introduce the Dropout in LeNet
+Image                 |     Normalized            |   Dropout           |  Validation Accuracy
+|:-----------------:|:------------------------:|: -----------------:|:------------------------
+|  32x32x1          |           x                       |   x                      |  
+|  32x32x1          |           v                       |   x                      |
+|  32x32x1          |           x                       |   v                      | 
+|  32x32x1          |           v                       |   v                      | 
 
-#### 5. Increase the database: Data Augmention
+#### 4. Increase the database: Data Augmention
 
 As a last step, I normalized the image data because ...
 
@@ -114,17 +132,17 @@ My final model consisted of the following layers:
 
 | Layer         		|     Description	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| Input         		| 32x32x1 Gray image   							| 
+| Input         		| 32x32x1 Grayscale image (non-normalized)   							| 
 | Convolution 5x5     	| 1x1 stride , padding =valid, outputs 28x28x6 	|
 | RELU					|Activation												|
 | Max pooling	      	| 2x2 stride,  padding =valid, outputs 5x5x16 				|
 | Flatten                 | 400 
 | Fully connected	    |  1x1 stride, padding= valid, outputs 120      									|
 | RELU				| Activation.        									|
-| Dropout						| keep_prob>0.5												|
+| **Dropout**						| keep_prob>0.5												|
 | Fully connected		    	| input= 120 Output=84												|
 | RELU                | Activation.                                            |
-| Dropout                        | keep_prob>0.5                                                |
+| **Dropout**                        | keep_prob>0.5                                                |
 | Fully connected                | input= 84 Output=42                    
 
 
