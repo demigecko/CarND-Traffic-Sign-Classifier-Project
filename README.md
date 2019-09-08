@@ -99,15 +99,12 @@ To examine if my code performs properly, I picked one category of the traffic si
 To simplfy my DOE (design of experiments). Here is my table:  
 
 | DOE     |  image      | Dataset Boost     | Normalized     | Dropout     | Validation Accuracy     |
-|:---:    |:-------:    |:-------------:    |:----------:    |:-------:    |:-------------------:    |
-|  1      | 32x32x3     |       x           |      x         |    x        |          -              |
-|  2      | 32x32x3     |       v           |      x         |    x        |          -              |
-|  3      | 32x32x3     |       x           |      v         |    x        |          -              |
-|  4      | 32x32x3     |       x           |      x         |    v        |          -              |
-|  5      | 32x32x3     |       v           |      v         |    x        |          -              |
-|  6      | 32x32x3     |       x           |      v         |    v        |          -              |
-|  7      | 32x32x3     |       v           |      x         |    v        |          -              |
-|  8      | 32x32x3     |       v           |      v         |    v        |          -              |
+|:---:    |:-------:    |:-------------:    |:----------:    |:-------:    |---------------------    |
+|  1      | 32x32x3     |       x           |      x         |    x        | -                       |
+|  2      | 32x32x3     |       v           |      x         |    x        | -                       |
+|  3      | 32x32x3     |       v           |      v         |    x        | -                       |
+|  4      | 32x32x3     |       v           |      x         |    v        | -                       |
+|  5      | 32x32x3     |       v           |      v         |    v        | -                       |
 
 #### 2. Use R G B + gray (32, 32, 4) 
 
@@ -115,15 +112,10 @@ To simplfy my DOE (design of experiments). Here is my table:
 
 | DOE     |  image      | Dataset Boost     | Normalized     | Dropout     | Validation Accuracy     |
 |:---:    |:-------:    |:-------------:    |:----------:    |:-------:    |:-------------------:    |
-|  1      | 32x32x3     |       x           |      x         |    x        |          -              |
 |  2      | 32x32x3     |       v           |      x         |    x        |          -              |
-|  3      | 32x32x3     |       x           |      v         |    x        |          -              |
-|  4      | 32x32x3     |       x           |      x         |    v        |          -              |
-|  5      | 32x32x3     |       v           |      v         |    x        |          -              |
-|  6      | 32x32x3     |       x           |      v         |    v        |          -              |
-|  7      | 32x32x3     |       v           |      x         |    v        |          -              |
-|  8      | 32x32x3     |       v           |      v         |    v        |          -              |
-
+|  3      | 32x32x3     |       v           |      v         |    x        |          -              |
+|  4      | 32x32x3     |       v           |      x         |    v        |          -              |
+|  5      | 32x32x3     |       v           |      v         |    v        |          -              |
 #### 3.  Use Gray image only (32, 32, 1)
 
 Convert the images to grayscale because ...
@@ -132,14 +124,10 @@ To simplfy my DOE (design of experiments). Here is my table:
 
 | DOE     |  image      | Dataset Boost     | Normalized     | Dropout     | Validation Accuracy     |
 |:---:    |:-------:    |:-------------:    |:----------:    |:-------:    |:-------------------:    |
-|  1      | 32x32x3     |       x           |      x         |    x        |          -              |
 |  2      | 32x32x3     |       v           |      x         |    x        |          -              |
-|  3      | 32x32x3     |       x           |      v         |    x        |          -              |
-|  4      | 32x32x3     |       x           |      x         |    v        |          -              |
-|  5      | 32x32x3     |       v           |      v         |    x        |          -              |
-|  6      | 32x32x3     |       x           |      v         |    v        |          -              |
-|  7      | 32x32x3     |       v           |      x         |    v        |          -              |
-|  8      | 32x32x3     |       v           |      v         |    v        |          -              |
+|  3      | 32x32x3     |       v           |      v         |    x        |          -              |
+|  4      | 32x32x3     |       v           |      x         |    v        |          -              |
+|  5      | 32x32x3     |       v           |      v         |    v        |          -              |
 
 
 #### 2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
