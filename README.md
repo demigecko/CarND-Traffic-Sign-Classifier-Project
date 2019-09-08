@@ -149,7 +149,7 @@ My final model consisted of the following layers:
 
 | Layer         		|     Description	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| Input         		| 32x32x1 Grayscale image (non-normalized)   							| 
+| Input         		| 32x32x3 (RGB), and  32x32x4 (RGB+Gray) , and 32x32x1 (Gray)  							| 
 | Convolution 5x5     	| 1x1 stride , padding =valid, outputs 28x28x6 	|
 | RELU					|Activation												|
 | Max pooling	      	| 2x2 stride,  padding =valid, outputs 5x5x16 				|
@@ -163,10 +163,11 @@ My final model consisted of the following layers:
 | Fully connected                | input= 84 Output=42                    
 
 
+I tried to modify a lot of parameters *in* or *between* layers, but I found dropout is the most efficient way to deal with overfitting and achieve high accuracy 
 
 #### 3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
 
-To train the model, I used an ....
+To train the model, I set some LeNet interlayer-connection parameters as global parameters, so I can output a graph of the validation accuracy directly. Here is the snapshot of how I did it. However, after some trials, I gave up on tunning those interlayer-connection parameters. After some study, I realized the usefulness of the dropout that we don't need to change the size of layers or the number of layers.
 
 #### 4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
 
@@ -177,17 +178,36 @@ My final model results were:
 
 If an iterative approach was chosen:
 * What was the first architecture that was tried and why was it chosen?
+
+Initially, I was hesitated to enlarge the database, therefore I was based on my understanding of CNN to perceive how a computer sees things. I tried the BRG image,  RGB+Gray images, grayscale-only image along with the normalization, but these cannot bring up the accuracy much. Later I tried the dropout with a grayscale image, finally, the validation accuracy is higher than 93%, but marginally meet the requirement. therefore the last step for me is to increase the database.
+
+
 * What were some problems with the initial architecture?
+
+overfitting and unable to meet the 93% requirement
+
 * How was the architecture adjusted and why was it adjusted? Typical adjustments could include choosing a different model architecture, adding or taking away layers (pooling, dropout, convolution, etc), using an activation function or changing the activation function. One common justification for adjusting an architecture would be due to overfitting or underfitting. A high accuracy on the training set but low accuracy on the validation set indicates over fitting; a low accuracy on both sets indicates under fitting.
+
+This concept i get it clearly, my report is all about how to overcome the overfittng. 
+
 * Which parameters were tuned? How were they adjusted and why?
+
+I use dropout probability =0.5 
+
 * What are some of the important design choices and why were they chosen? For example, why might a convolution layer work well with this problem? How might a dropout layer help with creating a successful model?
+
+Because CNN is good for searching features, and it doesn't matter where the location of the features in an image. In LeNet there are 90 or 120 interlayer parameters, too many parameters to induce the overfitting, so the concept of dropout layer is like adopting the L1 (Lasso) and L2 (Ridge) in Regression to me. 
 
 If a well known architecture was chosen:
 * What architecture was chosen?
+I primarily only use LeNet and added two dropout layer in the full-connection layer 
+
 * Why did you believe it would be relevant to the traffic sign application?
+
+Because the traffic signs have very similar shape, triangular or circular. 
+
 * How does the final model's accuracy on the training, validation and test set provide evidence that the model is working well?
  
-
 ### Test a Model on New Images
 
 #### 1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
