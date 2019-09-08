@@ -84,6 +84,14 @@ I used three types of Augmentation: Rotation, Shear, and Translation to achieve 
 
 ![alt text][image4] 
 
+and I increased the dataset, now all traffic sign has 2010 images for training.  
+
+![alt text][image5] 
+
+To see if my code performs properly, I picked one traffic sign category and randomly select 15 images. 
+
+![alt text][image6]
+
 
 As a last step, I normalized the image data because ...
 
