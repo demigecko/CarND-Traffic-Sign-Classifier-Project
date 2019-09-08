@@ -104,7 +104,7 @@ To simplfy my DOE (design of experiments). Here is my table:
 
 
 | DOE     |  image      | Dataset Boost     | Normalized     | Dropout     | Training Accuracy     | Validation Accuracy     | Overfitting?     |
-|:---:    |:-------:    |:-------------:    |:----------:    |:-------:    |-------------------    |:-------------------:    |:------------:    |
+|:---:    |:-------:    |:-------------:    |:----------:    |:-------:    |:-----------------:    |:-------------------:    |:------------:    |
 |  1      |  32x32x3    |       v           |      x         |    x        |        0.991        |  0.916            |          Yes                |
 |  2      | 32x32x3     |       v           |      v         |    x        |        0.981        | 0.746            |          Yes                 |
 |  3      | 32x32x3     |       v           |      v         |    v        |        0.926          | 0.772          |          Yes                 |
@@ -115,7 +115,7 @@ To simplfy my DOE (design of experiments). Here is my table:
 To simplfy my DOE (design of experiments). Here is my table:  
 
 | DOE     |  image      | Dataset Boost     | Normalized     | Dropout     | Training Accuracy     | Validation Accuracy     | Overfitting?     |
-|:---:    |:-------:    |:-------------:    |:----------:    |:-------:    |-------------------    |:-------------------:    |:------------:    |
+|:---:    |:-------:    |:-------------:    |:----------:    |:-------:    |:-----------------:    |:-------------------:    |:------------:    |
 |  1      | 32x32x4     |       v           |      x         |    x        |                       |                         |      No          |
 |  2      | 32x32x4     |       v           |      v         |    x        |                       |          -              |                  |
 |  3      | 32x32x4     |       v           |      v         |    v        |                       |          -              |                  |
