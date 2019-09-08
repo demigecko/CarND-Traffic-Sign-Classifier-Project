@@ -113,6 +113,11 @@ To simplfy my DOE (design of experiments). Here is my table:
 |  1      | 32x32x4     |       v           |      x         |    x        |          -              |
 |  2      | 32x32x4     |       v           |      v         |    x        |          -              |
 |  3      | 32x32x4     |       v           |      v         |    v        |          -              |
+|  4      | 32x32x4     |       v           |      x         |    v        |          -              |
+|  5      | 32x32x4     |       x           |      x         |    v        |          -              |
+
+for some reason, normalized RGB isn't the best option. 
+
 
 #### 3.  Use Gray image only (32, 32, 1)
 
@@ -125,6 +130,8 @@ To simplfy my DOE (design of experiments). Here is my table:
 |  1      | 32x32x1     |       v           |      x         |    x        |          -              |
 |  2      | 32x32x1     |       v           |      v         |    x        |          -              |
 |  3      | 32x32x1     |       v           |      v         |    v        |          -              |
+|  4      | 32x32x1     |       v           |      x         |    v        |          -              |
+|  5      | 32x32x1     |       x           |      x         |    v        |          -              |
 
 
 #### 2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
