@@ -22,8 +22,7 @@ The goals / steps of this project are the following:
 [image3]: ./visualizations/all_traffic_signs.png "all_traffic_signs"
 [image4]: ./visualizations/augmented_images.png "sample of augmented_images"
 [image5]: ./visualizations/processed_distributions.png "processed_distributions of all traffic signs"
-[image6]: ./visualizations/comfirmed_new_dataset "make sure all in the right places"
-
+[image6]: ./visualizations/comfirmed_new_dataset.png "make sure all in the right places"
 [image7]: ./visualizations/training_idea1_1.png "results_Normalized Image"
 [image7_1]: ./visualizations/training_idea1_2.png "results_Normalized Image"
 [image8]: ./visualizations/placeholder.png "Traffic Sign 3"
