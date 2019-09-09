@@ -96,7 +96,7 @@ To examine if my code performs properly, I picked one category of the traffic si
 
 ### The Design of Experiments (DOEs) 
 
-Please go through the following sessions A, B, and C, each of the sessions are my DOEs and  thought process. 
+Please go through the following sessions A, B, and C, each of the sessions are my DOEs and thought process. 
 
 #### A. RGB image (32, 32, 3)
 
@@ -117,10 +117,11 @@ Graphs below are the accuracy converging plots for each DOE condition.
 ![alt text][image7_3]
 
 With this simple trials, here are my observations: 
-(1) *Dataset boost* shows the smallest overfitting  (the value between Training Accuracy and Validation Accuracy) among all three DoEs. The Training Accuracy reaching 99.1%. This implies the boost of the dataset is effective. However, (2) the normalized images showed the worse *Validation Accuracy* while having the good *Training Accuracy*, which is the question I have. Last, (3) Dropout can help to close the gap between Training Accuracy and Validation Accuracy. 
+(1) *Dataset boost* shows the smallest overfitting  (the value between Training Accuracy and Validation Accuracy) among all three DOEs. The *Training Accuracy* reaching 99.1%. This implies the boost of the dataset is effective. However, (2) the normalized images showed the worse *Validation Accuracy* while having the good *Training Accuracy*, which is the question I have (my speculation will be explained later). Last, (3) Dropout can help to close the gap between Training Accuracy and Validation Accuracy, in other word, to avoid the overfitting.
 
 #### B. Use R G B + gray (32, 32, 4) 
 The intention to add one more layer of a grayscale image as the input data is to ensure all the information is fully utilized. Therefore, one individual image will have 4 channels. I would like to see if this approach would boost performance or not. I have a DOE plan shown below. 
+
 | DOE     |  image      | Dataset Boost     | Normalized     | Dropout     | Training Accuracy     | Validation Accuracy     | Overfitting?     |
 |:---:    |:-------:    |:-------------:    |:----------:    |:-------:    |:-----------------:    |:-------------------:    |:------------:    |
 |  1      | 32x32x4     |       v           |      x         |    x        |       0.983           |        0.881            |      No          |
