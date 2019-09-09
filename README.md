@@ -156,8 +156,8 @@ To simplfy my DOE (design of experiments). Here is my table:
 |:---:    |:-------:    |:-------------:    |:----------:    |:-------:    |:-----------------:    |:-------------------:    |:------------:    |
 |  1      | 32x32x1     |       v           |      x         |    x        |       0.994                |         0.938               |       a little          |
 |  2      | 32x32x1     |       v           |      v         |    x        |       0.990                |          0.791              |        Yes          |
-|  3      | 32x32x1     |       v           |      v         |    v        |       0.976                |          0.923              |        No          |
-|  4      | 32x32x1     |       v           |      x         |    v        |        0.919               |          0.799              |        Yes          |
+|  3      | 32x32x1     |       v           |      x         |    v        |       0.976                |          0.923              |        No          |
+|  4      | 32x32x1     |       v           |      v         |    v        |        0.919               |          0.799              |        Yes          |
 |  5      | 32x32x1     |       x           |      x         |    v        |        0.989               |          0.921              |        a little         |
 
  images without any normalization performs better than those with normalization. Therefore, 
