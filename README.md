@@ -118,6 +118,11 @@ To simplfy my DOE (design of experiments). Here is my table:
 |  2      | 32x32x3     |       v           |      v         |    x        |        0.981        | 0.746            |          Yes                 |
 |  3      | 32x32x3     |       v           |      v         |    v        |        0.926          | 0.772          |          Yes                 |
 
+![alt text][image7_1]
+![alt text][image7_2]
+![alt text][image7_3]
+
+
 
 #### 2. Use R G B + gray (32, 32, 4) 
 
@@ -130,6 +135,10 @@ To simplfy my DOE (design of experiments). Here is my table:
 |  3      | 32x32x4     |       v           |      v         |    v        |       0.922           |        0.778            |      Yes         |
 |  4      | 32x32x4     |       v           |      x         |    v        |       0.943           |        0.878            |      No          |
 
+![alt text][image8_1]
+![alt text][image8_2]
+![alt text][image8_3]
+![alt text][image8_4]
 
 for some reason, normalized RGB isn't the best option. 
 
@@ -149,6 +158,13 @@ To simplfy my DOE (design of experiments). Here is my table:
 |  5      | 32x32x1     |       x           |      x         |    v        |                       |          -              |                  |
 
  images without any normalization performs better than those with normalization. Therefore, 
+ 
+ ![alt text][image9_1]
+ ![alt text][image9_2]
+ ![alt text][image9_3]
+ ![alt text][image9_4]
+ ![alt text][image9_5]
+ 
  
 #### 2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
 
