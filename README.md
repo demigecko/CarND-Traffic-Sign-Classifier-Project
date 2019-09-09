@@ -107,7 +107,7 @@ To examine if my code performs properly, I picked one category of the traffic si
 
 #### 1. RGB image (32, 32, 3)
 
- After data augmentation in the first step, I decided to do image normalization, because it helps to reduce the bias. Moreover, I tried the dropout (to reduce the variance), it will help to suppress those weak correlation parameters.  
+ After data augmentation in the first step, I decided to do image normalization, because it helps to reduce the bias. Moreover, I tried the dropout to reduce the variance, it will help to suppress those weak correlation parameters. the dropout probability is 0.5.
 
 To simplfy my DOE (design of experiments). Here is my table:  
 
@@ -122,7 +122,8 @@ To simplfy my DOE (design of experiments). Here is my table:
 ![alt text][image7_2]
 ![alt text][image7_3]
 
-
+With this simple trials, here are my observations: 
+(1) Dataset boost shows the smaller overfitting  (the value between Training Accuracy and Validation Accuracy) among all three DoEs. The Training Accuracy reaching 99.1%. All implies the boost of the dataset is effective. However, (2)  the normalized images don't give me the best performance nor the smallest *Training Accuracy*, which is the question I have. Last, (3) Dropout can help to close the gap between Training Accuracy and Validation Accuracy, but 
 
 #### 2. Use R G B + gray (32, 32, 4) 
 
@@ -139,6 +140,8 @@ To simplfy my DOE (design of experiments). Here is my table:
 ![alt text][image8_2]
 ![alt text][image8_3]
 ![alt text][image8_4]
+
+I added the gray-level image into an image, so one individual image will have 4 channels. I would like to see if this method can boost performance. As I observed the best performance is without image Normalization, and with dropout.  
 
 for some reason, normalized RGB isn't the best option. 
 
