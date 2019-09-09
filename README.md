@@ -73,7 +73,7 @@ Here is an exploratory visualization of the dataset. It is a bar chart showing h
 
 ![alt text][image2]
 
-I also prepared a dictionary to see all the signs v.s. images in grayscale. This graph will come handy when we get to the end of the problem sets. 
+I also prepared a dictionary to see all the signs v.s. images in grayscale. This graph will come handy when we get to the end of the problem set. 
 
 ![alt text][image3]
 
@@ -81,12 +81,15 @@ I also prepared a dictionary to see all the signs v.s. images in grayscale. This
 
 #### 1. Describe how you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, and provide example images of the additional data. Then describe the characteristics of the augmented training set like number of images in the set, number of images for each class, etc.)
 
-From the last session, the number of some traffic sign images is not sufficient (i.e. max: 2010 and min: 180). Moreover, after many times of playing with the LeNet 5-layer Architecture, I noticed the following: the result can easily fall into the overfitting situation that the *validation accuracy* is constantly lower than the *training accuracy*. therefore I took three approaches: (1) to enlarge the dataset by augmenting the existing images. Having a large dataset is always the best option to overcome the overfitting, (2) to use grayscale images instead of color ones because the RGB images as input were proven to not as good as grayscale images (explained in the later session), and (3) to introduce the dropout in the layers. All these actions are to reduce the overfitting issue and obtain high validation/testing accuracy.  
+From the last session, the number of some traffic signs is not sufficient (i.e. max: 2010 and min: 180). Moreover, after many times of playing with the LeNet 5-layer architecture, I noticed the following: the result can easily fall into the overfitting situation that the *validation accuracy* is constantly lower than the *training accuracy*. therefore I took three approaches: (1) to enlarge the dataset by augmenting the existing images. Having a large dataset is always the best option to overcome the overfitting, (2) to use grayscale images instead of color ones because the RGB images as input were proven to not as good as grayscale images (explained in the later session), and (3) to introduce the dropout in the layers. All these actions are to reduce the overfitting issue and obtain high validation/testing accuracy.  
 
 #### Increase the database: Data Augmention
 
-From the last session, the number of some traffic sign images is not sufficient (i.e. max: 2010 and min: 180). Moreover, after many times of playing with the LeNet 5-layer Architecture, I noticed the following: the result can easily fall into the overfitting situation that the *validation accuracy* is constantly lower than the *training accuracy*. therefore I took three approaches: (1) to enlarge the dataset by augmenting the existing images. Having a large dataset is always the best option to overcome the overfitting, (2) to use grayscale images instead of color ones because the RGB images as input were proven to not as good as grayscale images (explained in the later session), and (3) to introduce the dropout in the layers. All these actions are to reduce the overfitting issue and obtain high validation/testing accuracy.  The image below is the outcome randomly generated from my code. Depends on the number of existing images of each class (traffic sign), my code will generate the images up to 2010.   
+From the last session, the number of some traffic sign images is not sufficient (i.e. max: 2010 and min: 180). Moreover, after many times of playing with the LeNet 5-layer Architecture, I noticed the following: the result can easily fall into the overfitting situation that the *validation accuracy* is constantly lower than the *training accuracy*. Therefore I took three approaches: (1) to enlarge the dataset by augmenting the existing images. Having a large dataset is always the best option to overcome the overfitting, (2) to use grayscale images instead of color ones because using the RGB images as input is proven to be worse than using the grayscale images (explained in the later session), and (3) to introduce the dropout within layers. All these actions are to reduce the overfitting issue and obtain high validation/testing accuracy.  
+
+The image below is the outcome randomly generated from my code. Depends on the number of existing images of each class (traffic sign), my code will generate the images up to 2010.   
 ![alt text][image4] 
+Another look after data augmention.
 ![alt text][image5] 
 To examine if my code performs properly, I picked one category of the traffic signs and randomly produced 15 images for confirmation. 
 ![alt text][image6]
