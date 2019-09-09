@@ -40,7 +40,7 @@ The goals / steps of this project are the following:
 
 [image10]: ./lenet.png "LeNet"
 
-[image9]: ./visualizations/12_traffic_signs.png "Traffic Sign 12"
+[image11]: ./visualizations/12_traffic_signs.png "Traffic Sign 12"
 [image9]: ./visualizations/placeholder.png "Traffic Sign 4"
 [image10]: ./visualizations/placeholder.png "Traffic Sign 5"
 
@@ -247,22 +247,21 @@ If an iterative approach was chosen:
 * What was the first architecture that was tried and why was it chosen?
 All the discussion has been made in session A, B, and C. Please go to those sessions. 
 
-Initially, I was hesitated to enlarge the database, therefore I was based on my understanding of CNN to perceive how a computer sees things. I tried the BRG image,  RGB+Gray images, grayscale-only image along with the normalization, but these cannot bring up the accuracy much. Later I tried the dropout with a grayscale image, finally, the validation accuracy is higher than 93%, but marginally meet the requirement. therefore the last step for me is to increase the database. What a long journey! 
+Initially, I was hesitated to enlarge the database, therefore I was based on my understanding of CNN to perceive how a computer sees things. I tried the *RGB images*, * RGB+grayscale images*, *grayscale-only image* along with the normalization, but these cannot bring up the accuracy much. Later I tried the dropout with a grayscale image, finally, the validation accuracy is higher than 93%, but marginally meets the requirement of 93%. Therefore the last step for me is to increase the database. What a long journey! 
 
 * What were some problems with the initial architecture?
-All the discussion has been made in session A, B, and C. Please go to those sessions. in short, I stated below: 
-1. overfitting and unable to meet the 93% requirement 
-2. image normalization is a bad choice for sure.  
-3. the noise coming from color images. (my speculation)  
+All the discussion has been made in session A, B, and C. Please go to those sessions. In short, I stated below: 
+1. The overfitting and unable to meet the 93% requirement 
+2. The image normalization is a bad choice.  
+3. The noise coming from color images. (my speculation)  
 
 * How was the architecture adjusted and why was it adjusted? Typical adjustments could include choosing a different model architecture, adding or taking away layers (pooling, dropout, convolution, etc), using an activation function or changing the activation function. One common justification for adjusting an architecture would be due to overfitting or underfitting. A high accuracy on the training set but low accuracy on the validation set indicates over fitting; a low accuracy on both sets indicates under fitting.
 
-This concept I get it clearly, my report is all about how to overcome the overfittng. 
+This concept I get it clearly, my report is all about how to overcome the overfitting. 
 
 * Which parameters were tuned? How were they adjusted and why?
 
-grayscale image without normalization. 
-I add two dropout layers in LeNet 5. Because LeNet is the only CNN I know of, so I only do what is available so far. 
+The grayscale image without normalization. I add two dropout layers in LeNet 5. Because LeNet is the only CNN I know of, so I only do what is available so far. 
 
 * What are some of the important design choices and why were they chosen? For example, why might a convolution layer work well with this problem? How might a dropout layer help with creating a successful model?
 
@@ -271,11 +270,11 @@ Because CNN is good for searching features, and it doesn't matter where the loca
 If a well known architecture was chosen:
 * What architecture was chosen?
 
-I primarily only use LeNet and added two dropout layer in the full-connection layer 
+I primarily only used LeNet and added two dropout layers in the full-connection layer.
 
 * Why did you believe it would be relevant to the traffic sign application?
 
-Because the traffic signs have very similar shape, i.e. triangular or circular. 
+The traffic signs have very similar shapes, i.e. triangular or circular shapes. 
 
 * How does the final model's accuracy on the training, validation and test set provide evidence that the model is working well?
  
@@ -283,10 +282,9 @@ Because the traffic signs have very similar shape, i.e. triangular or circular.
 
 #### 1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
 
-Here are five German traffic signs that I found on the web:
+Here are 12 German traffic signs that I found on the web:
 
-![alt text][image4] ![alt text][image5] ![alt text][image6] 
-![alt text][image7] ![alt text][image8]
+ ![alt text][image11]
 
 The first image might be difficult to classify because ...
 
@@ -301,7 +299,6 @@ Here are the results of the prediction:
 | Yield					| Yield											|
 | 100 km/h	      		| Bumpy Road					 				|
 | Slippery Road			| Slippery Road      							|
-
 
 The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. This compares favorably to the accuracy on the test set of ...
 
