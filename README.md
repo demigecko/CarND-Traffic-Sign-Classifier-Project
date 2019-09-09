@@ -38,7 +38,7 @@ The goals / steps of this project are the following:
 [image9_4]: ./visualizations/lenet_3_doe4_new.png 
 [image9_5]: ./visualizations/lenet_3_doe5.png 
 
-[image10]: ./letnet.png "LeNet"
+[image10]: ./lenet.png "LeNet"
 
 [image9]: ./visualizations/12_traffic_signs.png "Traffic Sign 12"
 [image9]: ./visualizations/placeholder.png "Traffic Sign 4"
