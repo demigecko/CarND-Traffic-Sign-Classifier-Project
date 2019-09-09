@@ -124,6 +124,27 @@ With this simple trials, here are my observations:
 #### B. Use R G B + gray (32, 32, 4) 
 The intention to add one more layer of a grayscale image as the input data is to ensure all the information is fully utilized. Therefore, one individual image will have 4 channels. I would like to see if this approach would boost performance or not. I have a DOE plan shown below. 
 
+```
+X_train_preprocessed =[]
+#for index in range(n_train_final):
+for index in range(n_train):
+final = np.empty((32,32,4))
+image = X_train_final[index].squeeze()
+b = image[:,:,0]
+g = image[:,:,1]
+r = image[:,:,2]
+gray = cv2.cvtColor(image,cv2.COLOR_BGR2GRAY)
+final[:,:,0] = b
+final[:,:,1] = g
+final[:,:,2] = r
+final[:,:,3] = gray
+#final[:,:,0] = (b-128)/128
+#final[:,:,1] = (g-128)/128
+#final[:,:,2] = (r-128)/128   
+#final[:,:,3] = (gray-128)/128
+X_train_preprocessed.append(final)
+```
+
 | DOE     |  image      | Dataset Boost     | Normalized     | Dropout     | Training Accuracy     | Validation Accuracy     | Overfitting?     |
 |:---:    |:-------:    |:-------------:    |:----------:    |:-------:    |:-----------------:    |:-------------------:    |:------------:    |
 |  1      | 32x32x4     |       v           |      x         |    x        |       0.983           |        0.881            |      No          |
@@ -185,7 +206,7 @@ I tried to modify a lot of parameters *in* or *between* layers, but later I real
 
 #### 3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
 
-To train this model, I set some LeNet interlayer-connection parameters as global parameters, so I can output a graph of the validation accuracy directly. Here is the snapshot of how I did it. However, after some trials, I gave up on tunning those interlayer-connection parameters, because I realized the usefulness of the dropout that we don't need to change the size of layers or the number of layers. I downselected my approaches and DOEs at the very beginning of this report. 
+To train this model, I set some LeNet interlayer-connection parameters as global parameters, so I can output a graph of the validation accuracy directly. Here is the snapshot of how I did it. However, after some trials, I gave up on tunning those interlayer-connection parameters, because I realized the usefulness of the dropout that we don't need to change the size of layers or the number of layers. I downselected my approaches and DOEs at the very beginning of this report. I only used two times of dropout after two layers with large output numbers (120 and 84). I thought it would make sense of those numerous weights for contributing the overfitting.  
 
 ```
 import tensorflow as tf
