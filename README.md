@@ -168,7 +168,10 @@ To simplfy my DOE (design of experiments). Here is my table:
  ![alt text][image9_4]
  ![alt text][image9_5]
  
+ I squeezed the image into a one-single layer of gray image. By doing so, I kind of combined the most information but lost some linkage of different color layers. I found this way is the most effective way to reach high *Validation Accuracy*. the performance of DOE 3 can be improved if I increase the EPOCHS and dropout probability.  
  
+Therefore, I would like to downselect my input format to be a grayscale image with image normalization. Then I will try to tune the EPOCHS and Dropout probability to reach better performance. 
+
 #### 2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
 
 
