@@ -69,14 +69,11 @@ signs data set:
 
 #### 2. Include an exploratory visualization of the dataset.
 
-Here is an exploratory visualization of the data set. It is a bar chart showing how the data distributed. 
-
-One way to improve the accuracy and not having overfitting, and we can use data augmentation to increase the dataset first. 
+Here is an exploratory visualization of the data set. It is a bar chart showing how the data distributed. One way to improve accuracy and avoid having overfitting is to use data augmentation to increase the dataset first. The max count is 2010 and the minimum count is 180.
 
 ![alt text][image2]
 
-max count is 2010
-min count is  180
+
 
 I also prepared a dictionary to see all the signs v.s. images in grayscale. 
 
