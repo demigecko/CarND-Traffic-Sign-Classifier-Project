@@ -131,10 +131,10 @@ To simplfy my DOE (design of experiments). Here is my table:
 
 | DOE     |  image      | Dataset Boost     | Normalized     | Dropout     | Training Accuracy     | Validation Accuracy     | Overfitting?     |
 |:---:    |:-------:    |:-------------:    |:----------:    |:-------:    |:-----------------:    |:-------------------:    |:------------:    |
-|  1      | 32x32x4     |       v           |      x         |    x        |       0.993           |        0.940            |      No          |
-|  2      | 32x32x4     |       v           |      v         |    x        |       0.987           |        0.729            |      Yes         |
-|  3      | 32x32x4     |       v           |      v         |    v        |       0.922           |        0.778            |      Yes         |
-|  4      | 32x32x4     |       v           |      x         |    v        |       0.943           |        0.878            |      No          |
+|  1      | 32x32x4     |       v           |      x         |    x        |       0.983           |        0.881            |      No          |
+|  2      | 32x32x4     |       v           |      v         |    x        |       0.983           |        0.741            |      Yes         |
+|  3      | 32x32x4     |       v           |      v         |    v        |       0.927           |        0.791            |      Yes         |
+|  4      | 32x32x4     |       v           |      x         |    v        |       0.966           |        0.930            |      No          |
 
 ![alt text][image8_1]
 ![alt text][image8_2]
@@ -154,11 +154,11 @@ To simplfy my DOE (design of experiments). Here is my table:
 
 | DOE     |  image      | Dataset Boost     | Normalized     | Dropout     | Training Accuracy     | Validation Accuracy     | Overfitting?     |
 |:---:    |:-------:    |:-------------:    |:----------:    |:-------:    |:-----------------:    |:-------------------:    |:------------:    |
-|  1      | 32x32x1     |       v           |      x         |    x        |                  |                    |                |
-|  2      | 32x32x1     |       v           |      v         |    x        |                       |          -              |                  |
-|  3      | 32x32x1     |       v           |      v         |    v        |                       |          -              |                  |
-|  4      | 32x32x1     |       v           |      x         |    v        |                       |          -              |                  |
-|  5      | 32x32x1     |       x           |      x         |    v        |                       |          -              |                  |
+|  1      | 32x32x1     |       v           |      x         |    x        |       0.994                |         0.938               |       a little          |
+|  2      | 32x32x1     |       v           |      v         |    x        |       0.990                |          0.791              |        Yes          |
+|  3      | 32x32x1     |       v           |      v         |    v        |       0.976                |          0.923              |        No          |
+|  4      | 32x32x1     |       v           |      x         |    v        |        0.919               |          0.799              |        Yes          |
+|  5      | 32x32x1     |       x           |      x         |    v        |        0.989               |          0.921              |        a little         |
 
  images without any normalization performs better than those with normalization. Therefore, 
  
