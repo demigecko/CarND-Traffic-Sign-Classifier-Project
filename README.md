@@ -87,17 +87,20 @@ From the last session, the number of some traffic signs is not sufficient (i.e. 
 
 From the last session, the number of some traffic sign images is not sufficient (i.e. max: 2010 and min: 180). Moreover, after many times of playing with the LeNet 5-layer Architecture, I noticed the following: the result can easily fall into the overfitting situation that the *validation accuracy* is constantly lower than the *training accuracy*. Therefore I took three approaches: (1) to enlarge the dataset by augmenting the existing images. Having a large dataset is always the best option to overcome the overfitting, (2) to use grayscale images instead of color ones because using the RGB images as input is proven to be worse than using the grayscale images (explained in the later session), and (3) to introduce the dropout within layers. All these actions are to reduce the overfitting issue and obtain high validation/testing accuracy.  
 
-The image below is the outcome randomly generated from my code. Depends on the number of existing images of each class (traffic sign), my code will generate the images up to 2010.   
+The image below is the outcome randomly generated from my code. Depends on the number of existing images of each class (traffic sign), the code will generate the number of images up to 2010 (max).   
 ![alt text][image4] 
-Another look after data augmention.
+Another look of bar chart after data augmention.
 ![alt text][image5] 
 To examine if my code performs properly, I picked one category of the traffic signs and randomly produced 15 images for confirmation. 
 ![alt text][image6]
 
+### The Design of Experiments (DOEs) 
+
+Please go through the following sessions A, B, and C, each of the sessions are my DOEs and  thought process. 
+
 #### A. RGB image (32, 32, 3)
 
-
-After (1) dataset boost by augmentation, I decided to combine (1) image normalization, and (3) introduction of dropout. I chose these three as my *Design of Experiments* (DOEs). Intuitively,  image normalization would help to reduce the fitting bias and the dropout to reduce the variance, in other words, it suppresses those small weights to be zero. Here is the dropout condition is set the *keep_prob*  be either 1 or 0.5.
+After (1) dataset boost by augmentation, I decided to combine (2) image normalization, and (3) introduction of dropout. I chose these three as my *Design of Experiments* (DOEs). Intuitively,  image normalization would help to reduce the fitting bias and the dropout to reduce the variance, in other words, it suppresses those small weights to be zero. The dropout condition is to set the *keep_prob* either 1 or 0.5.
 
 To simplfy my DOE (design of experiments). Here is my table:  
 
