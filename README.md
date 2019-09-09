@@ -141,6 +141,7 @@ Among all 4 DOSs, the best performance is the one *without image normalization, 
 
 On the contrary to the 4 channel case, I would like to know if we squeeze the information into one layer, how it performs. 
 Below is my DOE table.
+
 | DOE     |  image      | Dataset Boost     | Normalized     | Dropout     | Training Accuracy     | Validation Accuracy     | Overfitting?     |
 |:---:    |:-------:    |:-------------:    |:----------:    |:-------:    |:-----------------:    |:-------------------:    |:------------:    |
 |  1      | 32x32x1     |       v           |      x         |    x        |       0.994                |         0.938               |       a little          |
