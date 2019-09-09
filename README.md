@@ -23,12 +23,21 @@ The goals / steps of this project are the following:
 [image4]: ./visualizations/augmented_images.png "sample of augmented_images"
 [image5]: ./visualizations/processed_distributions.png "processed_distributions of all traffic signs"
 [image6]: ./visualizations/comfirmed_new_dataset.png "make sure all in the right places"
-[image7_1]: ./visualizations/training_idea1_1.png "results_Normalized Image"
-[image7_2]: ./visualizations/training_idea1_2.png "results_Normalized Image"
-[image7_3]: ./visualizations/training_idea1_2.png "results_Normalized Image"
-[image7_1]: ./visualizations/training_idea1_1.png "results_Normalized Image"
-[image7_2]: ./visualizations/training_idea1_2.png "results_Normalized Image"
-[image7_3]: ./visualizations/training_idea1_2.png "results_Normalized Image"
+[image7_1]: ./visualizations/lenet_1_doe1.png 
+[image7_2]: ./visualizations/lenet_1_doe2.png 
+[image7_3]: ./visualizations/lenet_1_doe3.png 
+
+[image8_1]: ./visualizations/lenet_2_doe1.png 
+[image8_2]: ./visualizations/lenet_2_doe2.png 
+[image8_3]: ./visualizations/lenet_2_doe3.png 
+[image8_4]: ./visualizations/lenet_2_doe4.png 
+
+[image9_1]: ./visualizations/lenet_3_doe1_new.png 
+[image9_2]: ./visualizations/lenet_3_doe2_new.png
+[image9_3]: ./visualizations/lenet_3_doe3_new.png 
+[image9_4]: ./visualizations/lenet_3_doe4_new.png 
+[image9_5]: ./visualizations/lenet_3_doe5.png 
+
 [image8]: ./visualizations/placeholder.png "Traffic Sign 3"
 [image9]: ./visualizations/placeholder.png "Traffic Sign 4"
 [image10]: ./visualizations/placeholder.png "Traffic Sign 5"
@@ -116,11 +125,11 @@ To simplfy my DOE (design of experiments). Here is my table:
 
 | DOE     |  image      | Dataset Boost     | Normalized     | Dropout     | Training Accuracy     | Validation Accuracy     | Overfitting?     |
 |:---:    |:-------:    |:-------------:    |:----------:    |:-------:    |:-----------------:    |:-------------------:    |:------------:    |
-|  1      | 32x32x4     |       v           |      x         |    x        |                       |                         |      No          |
-|  2      | 32x32x4     |       v           |      v         |    x        |                       |          -              |                  |
-|  3      | 32x32x4     |       v           |      v         |    v        |                       |          -              |                  |
-|  4      | 32x32x4     |       v           |      x         |    v        |                       |          -              |                  |
-|  5      | 32x32x4     |       x           |      x         |    v        |                       |          -              |                  |
+|  1      | 32x32x4     |       v           |      x         |    x        |       0.993           |        0.940            |      No          |
+|  2      | 32x32x4     |       v           |      v         |    x        |       0.987           |        0.729            |      Yes         |
+|  3      | 32x32x4     |       v           |      v         |    v        |       0.922           |        0.778            |      Yes         |
+|  4      | 32x32x4     |       v           |      x         |    v        |       0.943           |        0.878            |      No          |
+
 
 for some reason, normalized RGB isn't the best option. 
 
@@ -131,15 +140,16 @@ Convert the images to grayscale because ...
 
 To simplfy my DOE (design of experiments). Here is my table:  
 
-| DOE     |  image      | Dataset Boost     | Normalized     | Dropout     | Validation Accuracy     |
-|:---:    |:-------:    |:-------------:    |:----------:    |:-------:    |:-------------------:    |
-|  1      | 32x32x1     |       v           |      x         |    x        |          -              |
-|  2      | 32x32x1     |       v           |      v         |    x        |          -              |
-|  3      | 32x32x1     |       v           |      v         |    v        |          -              |
-|  4      | 32x32x1     |       v           |      x         |    v        |          -              |
-|  5      | 32x32x1     |       x           |      x         |    v        |          -              |
+| DOE     |  image      | Dataset Boost     | Normalized     | Dropout     | Training Accuracy     | Validation Accuracy     | Overfitting?     |
+|:---:    |:-------:    |:-------------:    |:----------:    |:-------:    |:-----------------:    |:-------------------:    |:------------:    |
+|  1      | 32x32x1     |       v           |      x         |    x        |                  |                    |                |
+|  2      | 32x32x1     |       v           |      v         |    x        |                       |          -              |                  |
+|  3      | 32x32x1     |       v           |      v         |    v        |                       |          -              |                  |
+|  4      | 32x32x1     |       v           |      x         |    v        |                       |          -              |                  |
+|  5      | 32x32x1     |       x           |      x         |    v        |                       |          -              |                  |
 
-
+ images without any normalization performs better than those with normalization. Therefore, 
+ 
 #### 2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
 
 
