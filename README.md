@@ -40,7 +40,7 @@ The goals / steps of this project are the following:
 
 [image10]: ./lenet.png "LeNet"
 [image11]: ./lenet_final.png "final result"
-[image11]: ./visualizations/5_traffic_signs.png "Traffic Sign 12"
+[image12]: ./visualizations/12_traffic_signs.png "Traffic Sign 12"
 [image9]: ./visualizations/placeholder.png "Traffic Sign 4"
 [image10]: ./visualizations/placeholder.png "Traffic Sign 5"
 
