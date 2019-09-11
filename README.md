@@ -39,8 +39,8 @@ The goals / steps of this project are the following:
 [image9_5]: ./visualizations/lenet_3_doe5.png 
 
 [image10]: ./lenet.png "LeNet"
-
-[image11]: ./visualizations/12_traffic_signs.png "Traffic Sign 12"
+[image11]: ./lenet_final.png "final result"
+[image11]: ./visualizations/5_traffic_signs.png "Traffic Sign 12"
 [image9]: ./visualizations/placeholder.png "Traffic Sign 4"
 [image10]: ./visualizations/placeholder.png "Traffic Sign 5"
 
@@ -242,6 +242,9 @@ My final model results were:
 * training set accuracy of ?
 * validation set accuracy of ? 
 * test set accuracy of ?
+
+
+![alt text][image10]
 
 If an iterative approach was chosen:
 * What was the first architecture that was tried and why was it chosen?
