@@ -242,10 +242,7 @@ My final model results were:
 * training set accuracy of ?
 * validation set accuracy of ? 
 * test set accuracy of ?
-
-
-![alt text][image10]
-
+![alt text][image11]
 If an iterative approach was chosen:
 * What was the first architecture that was tried and why was it chosen?
 All the discussion has been made in session A, B, and C. Please go to those sessions. 
