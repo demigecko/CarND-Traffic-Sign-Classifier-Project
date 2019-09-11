@@ -14,7 +14,6 @@ The goals / steps of this project are the following:
 * Analyze the softmax probabilities of the new images
 * Summarize the results with a written report
 
-
 [//]: # (Image References)
 
 [image1]: ./visualizations/exploratory.png "exploratory"
@@ -239,10 +238,12 @@ training_operation = optimizer.minimize(loss_operation)
 All the discussion has been made in session A, B, and C. Please go to those sessions. In short, I downselected my input format to be a grayscale image without normalization. Then I tried to tune the EPOCHS and keep_prob (for the Dropout) to reach a better performance. 
 
 My final model results were:
-* training set accuracy of ?
-* validation set accuracy of ? 
-* test set accuracy of ?
+* training set accuracy of ? 98.5%
+* validation set accuracy of ? 95.0%
+* test set accuracy of ?  92.0%
+
 ![alt text][image11]
+
 If an iterative approach was chosen:
 * What was the first architecture that was tried and why was it chosen?
 All the discussion has been made in session A, B, and C. Please go to those sessions. 
@@ -284,9 +285,11 @@ The traffic signs have very similar shapes, i.e. triangular or circular shapes.
 
 Here are 12 German traffic signs that I found on the web:
 
- ![alt text][image11]
+ ![alt text][image12]
 
 The first image might be difficult to classify because ...
+
+I have trouble to classify these images that I found from the website. I did process it, comfirm thm by showing them in grayscale imags. 
 
 #### 2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
