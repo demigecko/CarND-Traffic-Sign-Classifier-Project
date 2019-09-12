@@ -18,7 +18,7 @@ The goals / steps of this project are the following:
 
 [image1]: ./visualizations/exploratory.png "exploratory"
 [image2]: ./visualizations/unprocessed_distributions.png "unprocessed_distribution of all traffic signs"
-[image3]: ./visualizations/all_traffic_signs.png "all_traffic_signs"
+[image3]: ./visualizations/43_traffic_signs.png "all_traffic_signs"
 [image4]: ./visualizations/augmented_images.png "sample of augmented_images"
 [image5]: ./visualizations/processed_distributions.png "processed_distributions of all traffic signs"
 [image6]: ./visualizations/comfirmed_new_dataset.png "make sure all in the right places"
@@ -39,8 +39,8 @@ The goals / steps of this project are the following:
 
 [image10]: ./lenet.png "LeNet"
 [image11]: ./visualizations/lenet_final.png "final result"
-[image12]: ./visualizations/5_traffic_signs.png "Traffic Sign 12"
-[image9]: ./visualizations/placeholder.png "Traffic Sign 4"
+[image12]: ./visualizations/5_traffic_signs.png "5 Traffic Sign"
+[image9]: ./visualizations/all_traffic_signs.png "All Traffic Sign"
 [image10]: ./visualizations/placeholder.png "Traffic Sign 5"
 
 ## Rubric Points
@@ -242,6 +242,11 @@ My final model results were:
 * validation set accuracy of ? 95.0%
 * test set accuracy of ?  92.0%
 
+```
+INFO:tensorflow:Restoring parameters from ./lenet
+Test Accuracy = 0.920
+```
+
 ![alt text][image11]
 
 If an iterative approach was chosen:
@@ -275,52 +280,80 @@ I primarily only used LeNet and added two dropout layers in the full-connection 
 
 * Why did you believe it would be relevant to the traffic sign application?
 
-The traffic signs have very similar shapes, i.e. triangular or circular shapes. 
+Because the features are in differnt levels. the deep the layer is, the bigger the feature would be, i.e. the shape of the traffic signs: triangular or circular
 
 * How does the final model's accuracy on the training, validation and test set provide evidence that the model is working well?
- 
+
+During the training, the machine never sees the test dataset. Based on this assumption, we know the training accuracy is slowly getting better and better up to 98.5%, and the validation accuracy shows an average of above 94%.  Moreover, the testing accuracy is up to 92%.  I believe there is still room to improve, and based on the fact, the model is working well. 
+
 ### Test a Model on New Images
 
 #### 1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
 
-Here are 12 German traffic signs that I found on the web:
+Here are 5 German traffic signs that I found on the web:
 
  ![alt text][image12]
 
-The first image might be difficult to classify because ...
-
-I have trouble to classify these images that I found from the website. I did process it, comfirm thm by showing them in grayscale imags. 
+```
+INFO:tensorflow:Restoring parameters from ./lenet
+Test Set Accuracy = 0.800
+```
 
 #### 2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
 Here are the results of the prediction:
 
-| Image			        |     Prediction	        					| 
-|:---------------------:|:---------------------------------------------:| 
-| Stop Sign      		| Stop sign   									| 
-| U-turn     			| U-turn 										|
-| Yield					| Yield											|
-| 100 km/h	      		| Bumpy Road					 				|
-| Slippery Road			| Slippery Road      							|
+| Image                                    | Prediction                               |
+|--------------------------------------    |--------------------------------------    |
+| Priority Road                            | Priority Road                            |
+| Speed Limit (30km/h)                     | Speed Limit (80km/h)                     |
+| General Caution                          | General Caution                          |
+| Right-of-way at the next intersetion     | Right-of-way at the next intersetion     |
+| speed limit (60 km/h)                    | speed limit (60 km/h)                    |
 
-The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. This compares favorably to the accuracy on the test set of ...
+The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. This compares favorably to the accuracy on the test set of 92% 
+
 
 #### 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
-The code for making predictions on my final model is located in the 11th cell of the Ipython notebook.
+The code for making predictions on my final model is located in the very end of the Ipython notebook.
 
-For the first image, the model is relatively sure that this is a stop sign (probability of 0.6), and the image does contain a stop sign. The top five soft max probabilities were
+For the first image, the model is relatively sure that this is a stop sign (probability of 1.0), and the image does contain a Priority Road. The top five soft max probabilities were
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| .60         			| Stop sign   									| 
-| .20     				| U-turn 										|
-| .05					| Yield											|
-| .04	      			| Bumpy Road					 				|
-| .01				    | Slippery Road      							|
+| 1.0         			| Priority Road						| 
 
+For the second image, the model fails and the correct one is actually at the 5th top probablity  (probability of 2%), and the image does contain a stop sign. The one that my model couldn't classify correctly is among those 5 images is the traffic sign of the speed limit (30km/h). The input image was so clear and I was surprised that it couldn't be classified accurately. After using the top-k function to verify those images and top_5 probabilities, I realized that it was misclassified by the sign of the speed limit of 80km/h, 60km/h, and 50km/h.  And the 4th top probably for the correct one (30km/h) is only 2%. 
 
-For the second image ... 
+The top five soft max probabilities were
+| Probability     | Prediction                                       |
+|-------------    |----------------------------------------------    |
+| 92%             | Speed Limit (80km/h)                             |
+| 3%              | Speed Limit (60km/h)                             |
+| 3%              | Speed Limit (50km/h)                             |
+| 2%              | Speed Limit (30km/h)                             |
+| 0%              | No passing for vehicles over 3.5 metric tons     |
+
+For third second image:  General Caution                          
+
+| Probability             |     Prediction                                | 
+|:---------------------:|:---------------------------------------------:| 
+| 1.0                     | General Caution                                                | 
+
+For fourth second image: Right-of-way at the next intersetion
+
+| Probability             |     Prediction                                | 
+|:---------------------:|:---------------------------------------------:| 
+| 1.0                     | Right-of-way at the next intersetion                       | 
+
+For fifth second image: Speed Limit (60km/h)   
+
+| Probability             |     Prediction                                | 
+|:---------------------:|:---------------------------------------------:| 
+| 0.7                     | Speed Limit (60km/h)                        | 
+| 0.73                    | Speed Limit (80km/h)                      | 
+
 
 ### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
 #### 1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
