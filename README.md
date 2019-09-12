@@ -318,13 +318,13 @@ The model was able to correctly guess 4 of the 5 traffic signs, which gives an a
 
 The code for making predictions on my final model is located in the very end of the Ipython notebook.
 
-For the first image, the model is relatively sure that this is a stop sign (probability of 1.0), and the image does contain a Priority Road. The top five soft max probabilities were
+For the first image, the model is 100% sure that this is a stop sign (probability of 1.0), and the image does contain a Priority Road. The top softmax probabilities is
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
 | 1.0         			| Priority Road						      | 
 
-For the second image, the model fails and the correct one is actually at the 5th top probablity  (probability of 2%), and the image does contain a stop sign. The one that my model couldn't classify correctly is among those 5 images is the traffic sign of the speed limit (30km/h). The input image was so clear and I was surprised that it couldn't be classified accurately. After using the top-k function to verify those images and top_5 probabilities, I realized that it was misclassified by the sign of the speed limit of 80km/h, 60km/h, and 50km/h.  And the 4th top probably for the correct one (30km/h) is only 2%. 
+For the second image, the model fails and the correct one is actually at the 4th top probablity  (probability of 2%). The input image was so clear and I was surprised that it couldn't be classified accurately. After using the top-k function to verify those images and top_5 probabilities, I realized that it was misclassified by the sign of the speed limit of 80km/h, 60km/h, and 50km/h. And the 4th top probably for the correct one (30km/h) is only 2%. It makes sense to me because those are so similar. 
 
 The top five soft max probabilities were
 
@@ -335,25 +335,26 @@ The top five soft max probabilities were
 | 3%              | Speed Limit (50km/h)                             |
 | 2%              | Speed Limit (30km/h)                             |
 
-For third second image:  General Caution                          
+For third second image, the model is 100% sure that this is a General Caution (probability of 1.0)                      
 
 | Probability             |     Prediction                                | 
 |:---------------------:|:---------------------------------------------:| 
 | 1.0                     | General Caution                                                | 
 
-For fourth second image: Right-of-way at the next intersetion
+For fourth second image, the model is 100% sure that this is a Right-of-way at the next intersetion (probability of 1.0) 
 
 | Probability             |     Prediction                                | 
 |:---------------------:|:---------------------------------------------:| 
 | 1.0                     | Right-of-way at the next intersetion                       | 
 
-For fifth second image: Speed Limit (60km/h)   
+For fifth second image: the model can only predict the Speed Limit (60km/h) with 0.7 Probability and the other 0.3 is Speed Limit (80km/h) 
 
 | Probability             |     Prediction                                | 
 |:---------------------:|:---------------------------------------------:| 
 | 0.7                     | Speed Limit (60km/h)                        | 
 | 0.3                    | Speed Limit (80km/h)                      | 
 
+One thing to imporve this model is to have more data on those signs of Speed Limits.  
 
 ### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
 #### 1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
