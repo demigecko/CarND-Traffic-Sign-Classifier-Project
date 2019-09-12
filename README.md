@@ -334,7 +334,6 @@ The top five soft max probabilities were
 | 3%              | Speed Limit (60km/h)                             |
 | 3%              | Speed Limit (50km/h)                             |
 | 2%              | Speed Limit (30km/h)                             |
-| 0%              | No passing for vehicles over 3.5 metric tons     |
 
 For third second image:  General Caution                          
 
