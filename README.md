@@ -40,8 +40,7 @@ The goals / steps of this project are the following:
 [image10]: ./lenet.png "LeNet"
 [image11]: ./visualizations/lenet_final.png "final result"
 [image12]: ./visualizations/5_traffic_signs.png "5 Traffic Sign"
-[image9]: ./visualizations/all_traffic_signs.png "All Traffic Sign"
-[image10]: ./visualizations/placeholder.png "Traffic Sign 5"
+[image13]: ./visualizations/all_traffic_signs.png "All Traffic Sign"
 
 ## Rubric Points
 ### Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
@@ -294,6 +293,8 @@ Here are 5 German traffic signs that I found on the web:
 
  ![alt text][image12]
 
+I didn't think of any difficulty in the beginning. All images are clear. 
+
 ```
 INFO:tensorflow:Restoring parameters from ./lenet
 Test Set Accuracy = 0.800
@@ -312,7 +313,7 @@ Here are the results of the prediction:
 | speed limit (60 km/h)                    | speed limit (60 km/h)                    |
 
 The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. This compares favorably to the accuracy on the test set of 92% 
-
+ ![alt text][image13]
 
 #### 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
