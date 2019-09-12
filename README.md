@@ -322,7 +322,7 @@ For the first image, the model is relatively sure that this is a stop sign (prob
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| 1.0         			| Priority Road						| 
+| 1.0         			| Priority Road						      | 
 
 For the second image, the model fails and the correct one is actually at the 5th top probablity  (probability of 2%), and the image does contain a stop sign. The one that my model couldn't classify correctly is among those 5 images is the traffic sign of the speed limit (30km/h). The input image was so clear and I was surprised that it couldn't be classified accurately. After using the top-k function to verify those images and top_5 probabilities, I realized that it was misclassified by the sign of the speed limit of 80km/h, 60km/h, and 50km/h.  And the 4th top probably for the correct one (30km/h) is only 2%. 
 
@@ -352,7 +352,7 @@ For fifth second image: Speed Limit (60km/h)
 | Probability             |     Prediction                                | 
 |:---------------------:|:---------------------------------------------:| 
 | 0.7                     | Speed Limit (60km/h)                        | 
-| 0.73                    | Speed Limit (80km/h)                      | 
+| 0.3                    | Speed Limit (80km/h)                      | 
 
 
 ### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
